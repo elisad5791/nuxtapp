@@ -1,0 +1,12 @@
+<template>
+  <NuxtPage />
+</template>
+
+<style>
+.hover-move {
+  transition: transform 0.3s ease;
+}
+.hover-move:hover {
+  transform: translateY(-5px);
+}
+</style>
