@@ -4,8 +4,12 @@ export const useProducts = () => {
   const products = productsData;
 
   const getProductById = (id) => {
-    return products.find(product => product.id === parseInt(id))
+    return products.find(product => product.id === parseInt(id));
   };
 
-  return { products, getProductById }
+  const getProductsByCategory = (category) => {
+    return products.filter(product => product.category == category);
+  }
+
+  return { products, getProductById, getProductsByCategory }
 };

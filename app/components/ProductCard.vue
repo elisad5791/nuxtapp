@@ -5,7 +5,7 @@ defineProps(['product']);
 <template>
   <div class="col-12 col-sm-6 col-md-4 col-lg-3">
     <q-card class="hover-move cursor-pointer" @click="$router.push(`/products/${product.id}`)">
-      <q-img :src="product.image" :alt="product.title" ratio="1" class="product-image">
+      <q-img :src="product.image" :alt="product.title" ratio="1" fit="contain">
         <template v-slot:loading>
           <q-spinner-gears color="primary" />
         </template>
