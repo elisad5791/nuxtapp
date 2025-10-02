@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 defineProps(['icon', 'title', 'text']);
 </script>
 
