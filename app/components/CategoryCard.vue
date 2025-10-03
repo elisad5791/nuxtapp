@@ -1,5 +1,9 @@
-<script setup>
-defineProps(['image', 'title']);
+<script setup lang="ts">
+interface Props {
+  image: string;
+  title: string;
+}
+defineProps<Props>();
 </script>
 
 <template>

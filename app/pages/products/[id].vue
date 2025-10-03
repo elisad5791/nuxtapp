@@ -1,8 +1,10 @@
-<script setup>
+<script setup lang="ts">
+import { Product } from '../types';
+
 const route = useRoute();
 const { getProductById, getProductsByCategory } = useProducts();
 
-const product = getProductById(route.params.id);
+const product = getProductById(parseInt(route.params.id));
 
 const similarProducts = computed(() => getProductsByCategory(product.category)
   .filter(p => p.id !== product.id)
